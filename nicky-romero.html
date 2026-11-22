@@ -1,0 +1,882 @@
+
+<!--
+    DOCTYPE visar att dokumentet använder HTML5.
+
+    Det gör att webbläsaren vet hur den ska
+    tolka HTML-koden och visa sidan på rätt sätt.
+-->
+<!DOCTYPE html>
+
+
+<!--
+    Här börjar hela HTML-dokumentet.
+
+    Jag har använt lang="sv" eftersom
+    hemsidan är skriven på svenska.
+
+    Det hjälper bland annat skärmläsare
+    att läsa upp texten på rätt språk.
+-->
+<html lang="sv">
+
+
+<!--
+    Head innehåller information om själva sidan.
+
+    Här har jag bland annat lagt in sidans titel,
+    teckenkodning och kopplingen till CSS-filen.
+
+    Informationen i head visas vanligtvis inte
+    som vanligt innehåll på webbsidan.
+-->
+<head>
+
+
+    <!--
+        Jag använder UTF-8 som teckenkodning.
+
+        Det gör att svenska bokstäver som
+        å, ä och ö visas korrekt.
+
+        Utan rätt teckenkodning kan vissa
+        bokstäver visas som konstiga tecken.
+    -->
+    <meta charset="UTF-8">
+
+
+    <!--
+        Den här delen gör att sidan anpassas
+        efter olika skärmstorlekar.
+
+        width=device-width betyder att sidans
+        bredd följer enhetens skärmbredd.
+
+        initial-scale=1.0 betyder att sidan
+        visas i normal storlek från början.
+
+        Jag har lagt till detta för att
+        hemsidan även ska fungera på
+        mobiltelefoner och surfplattor.
+    -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!--
+        Här har jag skrivit en kort beskrivning
+        av vad den här sidan handlar om.
+
+        Beskrivningen kan användas av sökmotorer
+        när hemsidan visas i ett sökresultat.
+
+        Den visas alltså inte som vanlig text
+        på själva webbsidan.
+    -->
+    <meta
+        name="description"
+        content="Läs om Nicky Romero, hans spelning på Push i Göteborg och upptäck hans musik på YouTube."
+    >
+
+
+    <!--
+        Title bestämmer vilken text som
+        visas i fliken högst upp i webbläsaren.
+
+        Jag har valt att skriva Nicky Romero
+        tillsammans med SWE Beats så att
+        det blir tydligt vilken sida man är på.
+    -->
+    <title>Nicky Romero | SWE Beats</title>
+
+
+    <!--
+        Här kopplar jag HTML-filen till
+        min CSS-fil som heter style.css.
+
+        HTML används för att bygga upp
+        innehållet och strukturen på sidan.
+
+        CSS används för att bestämma
+        hur hemsidan ska se ut.
+
+        I CSS-filen har jag bland annat
+        bestämt färger, textstorlekar,
+        mellanrum och hur korten ska se ut.
+
+        Genom att använda samma CSS-fil
+        på flera sidor får hela hemsidan
+        en enhetlig design.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<!--
+    Body innehåller allt som besökaren
+    kan se och använda på webbsidan.
+
+    Här finns bland annat hemsidans namn,
+    navigationsmenyn, bilden på Nicky Romero,
+    information om spelningen och musikfunktionen.
+-->
+<body>
+
+
+
+    <!--
+        Här börjar sidhuvudet.
+
+        Jag använder header för att samla
+        hemsidans namn och navigationsmenyn.
+
+        Klassen site-header används i CSS
+        för att bestämma hur sidhuvudet
+        ska se ut.
+
+        Jag använder samma sidhuvud på
+        mina olika HTML-sidor för att
+        skapa en sammanhängande design.
+    -->
+    <header class="site-header">
+
+
+        <!--
+            H1 är sidans huvudrubrik.
+
+            Här använder jag den för SWE Beats,
+            som är namnet på min hemsida.
+
+            Klassen logo gör att jag kan
+            ändra utseendet på texten genom CSS.
+
+            Jag har bland annat valt en större
+            textstorlek och en lila färg.
+        -->
+        <h1 class="logo">SWE Beats</h1>
+
+
+
+        <!--
+            Nav används för att skapa
+            navigationsmenyn på hemsidan.
+
+            Klassen main-nav gör att jag kan
+            styla menyn med hjälp av CSS.
+
+            aria-label="Huvudmeny" beskriver
+            vad det är för meny.
+
+            Det hjälper bland annat personer
+            som använder skärmläsare.
+        -->
+        <nav class="main-nav" aria-label="Huvudmeny">
+
+
+            <!--
+                Jag använder ul för att skapa
+                en lista med menyalternativ.
+
+                Ul betyder unordered list,
+                alltså en lista utan numrering.
+
+                Varje li innehåller en länk
+                till en av hemsidans sidor.
+
+                Med hjälp av CSS kan jag
+                placera länkarna bredvid varandra.
+            -->
+            <ul>
+
+
+                <!--
+                    Den här länken leder till
+                    startsidan index.html.
+
+                    A-taggen gör texten klickbar
+                    och href anger vilken sida
+                    som ska öppnas.
+                -->
+                <li>
+                    <a href="index.html">Hem</a>
+                </li>
+
+
+                <!--
+                    Den här länken leder till
+                    stader.html.
+
+                    Där har jag samlat artister
+                    och evenemang i olika städer.
+                -->
+                <li>
+                    <a href="stader.html">Stad</a>
+                </li>
+
+
+                <!--
+                    Den här länken leder till
+                    sidan om-oss.html.
+
+                    Där berättar jag mer om
+                    SWE Beats och hemsidans idé.
+                -->
+                <li>
+                    <a href="om-oss.html">Om oss</a>
+                </li>
+
+
+                <!--
+                    Den sista länken leder
+                    till kontakt.html.
+
+                    Där kan besökaren hitta
+                    kontaktinformation.
+                -->
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!--
+        Main innehåller det viktigaste
+        innehållet på den här sidan.
+
+        Jag har delat upp innehållet
+        i fyra olika sektioner.
+
+        Den första presenterar Nicky Romero,
+        den andra handlar om hans spelning,
+        den tredje innehåller musikfunktionen
+        och den sista har en tillbakalänk.
+
+        Det gör sidan mer organiserad
+        och enklare att navigera på.
+    -->
+    <main>
+
+
+
+        <!--
+            FÖRSTA SEKTIONEN - OM NICKY ROMERO
+
+            Här presenterar jag Nicky Romero
+            med en bild och information om honom.
+
+            Jag använder section för att
+            dela upp sidan i olika delar.
+
+            Klassen section används i CSS
+            för att bestämma bland annat
+            mellanrum och placering.
+
+            Samma klass används på flera
+            ställen för att få en enhetlig design.
+        -->
+        <section class="section">
+
+
+            <!--
+                H2 används för rubriker
+                till de olika sektionerna.
+
+                Jag använder h2 eftersom
+                SWE Beats redan är sidans
+                huvudrubrik med h1.
+
+                Här visar rubriken vilken
+                artist sidan handlar om.
+            -->
+            <h2>Nicky Romero</h2>
+
+
+
+            <!--
+                Här använder jag img för
+                att visa en bild på Nicky Romero.
+
+                src="NICKY ROMERO.JPG" anger
+                vilken bildfil som ska visas.
+
+                Bildfilen ligger i min
+                projektmapp tillsammans
+                med HTML-filerna.
+
+                Alt är en alternativ text
+                som beskriver bilden.
+
+                Den är viktig för tillgängligheten
+                och används bland annat av
+                personer som har skärmläsare.
+
+                width="350" betyder att
+                bilden får en bredd på 350 pixlar.
+
+                Bildens övriga utseende kan
+                också påverkas av min CSS-fil.
+            -->
+            <img
+                src="NICKY ROMERO.JPG"
+                alt="Bild på DJ:n Nicky Romero"
+                width="350"
+            >
+
+
+
+            <!--
+                Här använder jag p för
+                att skriva vanlig text.
+
+                P betyder paragraph och
+                används för textstycken.
+
+                I det första stycket berättar
+                jag vem Nicky Romero är,
+                hans riktiga namn och
+                var han kommer ifrån.
+
+                Jag har delat upp informationen
+                i flera stycken för att texten
+                ska bli lättare att läsa.
+            -->
+            <p>
+                Nicky Romero, egentligen Nick Rotteveel,
+                är en nederländsk DJ och producent.
+                Han föddes 1989 i Amerongen och
+                växte upp i Utrecht.
+            </p>
+
+
+
+            <!--
+                Här berättar jag vilken typ
+                av elektronisk musik han spelar.
+
+                Jag nämner också några
+                kända artister som han
+                har samarbetat med.
+
+                Det ger besökaren en bättre
+                bild av hans musik och karriär.
+            -->
+            <p>
+                Han spelar house, electro house
+                och progressiv house och har
+                samarbetat med flera stora artister,
+                bland annat Tiësto, David Guetta,
+                Avicii och Calvin Harris.
+            </p>
+
+
+
+            <!--
+                I det här stycket berättar
+                jag om hans skivbolag och
+                radioprogram.
+
+                Jag använder ett eget textstycke
+                för att skilja den informationen
+                från resten av presentationen.
+            -->
+            <p>
+                Han driver skivbolaget Protocol Recordings
+                och är känd för radioprogrammet
+                Protocol Radio.
+            </p>
+
+
+
+            <!--
+                Här beskriver jag hur
+                Nicky Romero brukar uppträda
+                på festivaler och klubbar.
+
+                Det avslutar presentationen
+                av artisten innan nästa sektion.
+            -->
+            <p>
+                På festivaler och klubbar är han
+                känd för sina energiska framträdanden
+                inom elektronisk dansmusik.
+            </p>
+
+
+        </section>
+
+
+
+        <!--
+            ANDRA SEKTIONEN - SPELNING I GÖTEBORG
+
+            Här har jag samlat information
+            om Nicky Romeros spelning på
+            nattklubben Push i Göteborg.
+
+            Jag har först lagt in en kort
+            beskrivning av spelningen.
+
+            Sedan visar jag datum, plats
+            och stad i ett informationskort.
+
+            Jag använder ett kort eftersom
+            informationen blir tydligare
+            och enklare att hitta.
+        -->
+        <section class="section">
+
+
+
+            <!--
+                Här använder jag h2 som rubrik
+                för sektionen om spelningen.
+            -->
+            <h2>Nicky Romero i Göteborg</h2>
+
+
+
+            <!--
+                Här skriver jag när och var
+                Nicky Romero uppträdde.
+
+                Texten ligger i en p-tagg
+                eftersom det är vanlig brödtext.
+            -->
+            <p>
+                Den 14 november 2026 uppträdde
+                Nicky Romero på nattklubben Push
+                i Göteborg.
+            </p>
+
+
+
+            <!--
+                Här använder jag en div
+                för att samla eventkortet.
+
+                Klassen event-container används
+                i CSS för att bestämma hur
+                korten ska placeras på sidan.
+
+                Jag använder samma klass
+                på andra sidor för att
+                behålla samma design.
+            -->
+            <div class="event-container">
+
+
+
+                <!--
+                    Article används för innehåll
+                    som fungerar som en egen del.
+
+                    Här använder jag article
+                    för att skapa ett kort
+                    med information om spelningen.
+
+                    Klassen event-card kopplar
+                    kortet till min CSS-fil.
+
+                    I CSS har jag bland annat
+                    bestämt kortets bakgrundsfärg,
+                    rundade hörn och mellanrum.
+                -->
+                <article class="event-card">
+
+
+
+                    <!--
+                        H3 används som rubrik
+                        inne i själva kortet.
+
+                        Den ligger på en lägre
+                        rubriknivå än h2-rubriken
+                        för hela sektionen.
+                    -->
+                    <h3>Nicky Romero – Göteborg 2026</h3>
+
+
+
+                    <!--
+                        Här använder jag strong
+                        för att markera ordet Datum.
+
+                        Strong visar att texten
+                        har extra betydelse och
+                        visas normalt i fetstil.
+
+                        Det gör det enklare att
+                        skilja rubriken från datumet.
+                    -->
+                    <p>
+                        <strong>Datum:</strong>
+                        14 november 2026
+                    </p>
+
+
+
+                    <!--
+                        Här visar jag vilken
+                        nattklubb spelningen var på.
+
+                        Jag använder samma upplägg
+                        som för datumet för att
+                        informationen ska bli tydlig.
+                    -->
+                    <p>
+                        <strong>Plats:</strong>
+                        Nattklubben Push
+                    </p>
+
+
+
+                    <!--
+                        Här visar jag vilken
+                        stad spelningen var i.
+
+                        Även här använder jag
+                        strong för att markera
+                        vad informationen gäller.
+                    -->
+                    <p>
+                        <strong>Stad:</strong>
+                        Göteborg
+                    </p>
+
+
+                </article>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!--
+            TREDJE SEKTIONEN - MUSIKFUNKTIONEN
+
+            Här har jag lagt till en interaktiv
+            funktion med hjälp av JavaScript.
+
+            Funktionen gör att besökaren
+            kan klicka på en knapp och få
+            en slumpmässig låt av Nicky Romero.
+
+            När en låt har valts visas
+            låtens namn och en länk till YouTube.
+
+            Jag har gjort samma funktion
+            på de andra artistsidorna också.
+
+            Det gör hemsidan mer interaktiv
+            än om den bara hade innehållit
+            bilder och vanlig text.
+        -->
+        <section class="section">
+
+
+
+            <!--
+                Här använder jag h2 som
+                rubrik för musikfunktionen.
+            -->
+            <h2>Upptäck Nicky Romeros musik</h2>
+
+
+
+            <!--
+                Här har jag lagt in en kort
+                instruktion till besökaren.
+
+                Texten förklarar vad som händer
+                när man klickar på knappen.
+            -->
+            <p>
+                Vet du inte vilken låt du ska lyssna på?
+                Klicka på knappen så väljer SWE Beats
+                en låt åt dig!
+            </p>
+
+
+
+            <!--
+                Här använder jag en div
+                för att samla musikfunktionen.
+
+                id="musikspelare" gör att
+                JavaScript kan hitta just
+                den här behållaren.
+
+                Ett id används för att
+                identifiera ett specifikt
+                HTML-element på sidan.
+
+                data-artist="nicky" är ett
+                eget data-attribut.
+
+                Det talar om för JavaScript
+                att den här sidan handlar
+                om Nicky Romero.
+
+                JavaScript kan läsa värdet
+                och välja rätt lista med låtar.
+
+                På de andra artistsidorna
+                använder jag andra värden,
+                till exempel "alesso",
+                "otto" och "shm".
+
+                På det sättet kan jag använda
+                samma JavaScript-fil till
+                flera olika artistsidor.
+            -->
+            <div id="musikspelare" data-artist="nicky">
+
+
+
+                <!--
+                    Här har jag skapat knappen
+                    som besökaren klickar på.
+
+                    Button används för att
+                    skapa en knapp i HTML.
+
+                    type="button" betyder
+                    att det är en vanlig knapp
+                    och inte en knapp som
+                    skickar ett formulär.
+
+                    id="slumpa-knapp" gör att
+                    JavaScript kan hitta knappen.
+
+                    I JavaScript använder jag
+                    en klickhändelse för att
+                    känna av när någon trycker.
+
+                    När knappen klickas körs
+                    funktionen som slumpar
+                    fram en av artistens låtar.
+
+                    Knappens storlek, färg
+                    och utseende styrs i CSS.
+                -->
+                <button
+                    type="button"
+                    id="slumpa-knapp">
+                    Slumpa en låt
+                </button>
+
+
+
+                <!--
+                    Här visas resultatet
+                    från JavaScript-funktionen.
+
+                    Från början står texten
+                    "Ingen låt vald ännu."
+
+                    När besökaren klickar
+                    på knappen väljer JavaScript
+                    en slumpmässig låt.
+
+                    Sedan ändras texten
+                    till namnet på låten.
+
+                    id="slumpad-lat" gör att
+                    JavaScript hittar rätt
+                    textstycke att ändra.
+
+                    aria-live="polite" gör att
+                    skärmläsare kan meddela
+                    när texten uppdateras.
+
+                    Det gör funktionen mer
+                    tillgänglig för besökare.
+                -->
+                <p
+                    id="slumpad-lat"
+                    aria-live="polite">
+                    Ingen låt vald ännu.
+                </p>
+
+
+
+                <!--
+                    Här har jag skapat en länk
+                    som leder till YouTube.
+
+                    Från början är href="#"
+                    eftersom ingen låt har valts.
+
+                    När JavaScript slumpar en låt
+                    ändras href till den YouTube-länk
+                    som hör till just den låten.
+
+                    target="_blank" betyder att
+                    YouTube öppnas i en ny flik.
+
+                    rel="noopener noreferrer"
+                    används av säkerhetsskäl
+                    när länken öppnas i en ny flik.
+
+                    hidden betyder att länken
+                    är dold från början.
+
+                    När JavaScript har valt en låt
+                    görs länken synlig.
+
+                    Besökaren kan sedan klicka
+                    på länken för att lyssna
+                    på låten via YouTube.
+                -->
+                <a
+                    id="youtube-lank"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    hidden>
+                    Lyssna på YouTube
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!--
+            FJÄRDE SEKTIONEN - TILLBAKALÄNK
+
+            Här har jag lagt in en länk
+            som tar besökaren tillbaka
+            till startsidan.
+
+            Jag tycker det är bra att ha
+            en sådan länk eftersom det
+            gör hemsidan lättare att använda.
+
+            Besökaren behöver då inte
+            använda webbläsarens tillbaka-knapp.
+        -->
+        <section class="section">
+
+
+
+            <!--
+                Här använder jag a för
+                att skapa en klickbar länk.
+
+                href="index.html" betyder
+                att länken leder till startsidan.
+
+                Jag har lagt länken i en p-tagg
+                för att den ska ligga som
+                ett eget textstycke.
+            -->
+            <p>
+                <a href="index.html">
+                    Tillbaka till startsidan
+                </a>
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!--
+        Här börjar sidfoten.
+
+        Footer används för innehåll
+        som ligger längst ner på sidan.
+
+        Klassen site-footer används
+        för att styla sidfoten i CSS.
+
+        Jag använder samma sidfot på
+        mina olika HTML-sidor för att
+        behålla en enhetlig design.
+    -->
+    <footer class="site-footer">
+
+
+
+        <!--
+            Här visar jag hemsidans namn
+            tillsammans med årtalet.
+
+            &copy; används för att visa
+            copyright-symbolen.
+
+            Jag använder en p-tagg
+            eftersom det är vanlig text.
+        -->
+        <p>
+            &copy; 2026 SWE Beats.
+            Alla rättigheter förbehållna.
+        </p>
+
+
+    </footer>
+
+
+
+    <!--
+        Här kopplar jag HTML-sidan
+        till min JavaScript-fil script.js.
+
+        JavaScript används för att göra
+        hemsidan mer interaktiv.
+
+        I script.js har jag lagt in
+        låtlistor för de olika artisterna.
+
+        Jag har också skapat en funktion
+        som slumpar fram en låt.
+
+        Funktionen kan använda Math.random()
+        för att välja ett slumpmässigt
+        alternativ från en låtlista.
+
+        JavaScript kontrollerar vilken
+        artist sidan handlar om genom
+        data-artist-attributet.
+
+        På den här sidan är värdet "nicky",
+        vilket gör att Nicky Romeros
+        låtar ska användas.
+
+        När besökaren klickar på knappen
+        uppdateras texten med låtens namn
+        och länken till YouTube.
+
+        Jag använder samma JavaScript-fil
+        till Alesso, Otto Knows,
+        Swedish House Mafia och Nicky Romero.
+
+        Script-taggen ligger längst ner
+        i body så att HTML-elementen
+        hinner läsas in innan koden körs.
+    -->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

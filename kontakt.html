@@ -1,0 +1,540 @@
+
+<!--
+    DOCTYPE visar att jag använder HTML5.
+
+    Det gör att webbläsaren vet hur
+    den ska tolka och visa min HTML-kod.
+-->
+<!DOCTYPE html>
+
+
+<!--
+    Här börjar mitt HTML-dokument.
+
+    Jag använder lang="sv" eftersom
+    innehållet på hemsidan är på svenska.
+
+    Det hjälper bland annat skärmläsare
+    att läsa upp texten på rätt språk.
+-->
+<html lang="sv">
+
+
+<!--
+    Head innehåller information om sidan
+    som inte visas direkt på webbsidan.
+
+    Här har jag lagt in teckenkodning,
+    inställningar för skärmstorlek,
+    sidans beskrivning och kopplingen till CSS.
+-->
+<head>
+
+
+    <!--
+        Jag använder UTF-8 för att
+        svenska bokstäver som å, ä och ö
+        ska visas på rätt sätt.
+
+        Det är viktigt eftersom hela
+        hemsidan är skriven på svenska.
+    -->
+    <meta charset="UTF-8">
+
+
+    <!--
+        Den här inställningen gör att
+        sidan anpassas efter skärmens bredd.
+
+        width=device-width innebär att
+        sidan använder enhetens skärmbredd.
+
+        initial-scale=1.0 innebär att
+        sidan visas i normal storlek.
+
+        Jag har med detta för att
+        hemsidan ska kunna fungera
+        på både dator, mobil och surfplatta.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--
+        Här har jag lagt in en kort
+        beskrivning av sidan.
+
+        Beskrivningen kan användas av
+        sökmotorer i sökresultaten.
+
+        Den syns inte som vanlig text
+        på själva webbsidan.
+    -->
+    <meta name="description" content="Kontakta SWE Beats för frågor och evenemangstips.">
+
+
+    <!--
+        Title bestämmer vilken text
+        som visas i webbläsarens flik.
+
+        Jag har valt Kontakt | SWE Beats
+        så att besökaren enkelt kan se
+        vilken sida som är öppen.
+    -->
+    <title>Kontakt | SWE Beats</title>
+
+
+    <!--
+        Här kopplar jag min HTML-fil
+        till CSS-filen style.css.
+
+        HTML används för att bygga upp
+        innehållet och strukturen.
+
+        CSS används för att bestämma
+        hur hemsidan ska se ut.
+
+        Jag använder samma CSS-fil på
+        alla mina sidor för att behålla
+        samma färger, typsnitt och layout.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<!--
+    Body innehåller allt som besökaren
+    faktiskt kan se på webbsidan.
+
+    Här finns sidhuvudet, navigationsmenyn,
+    kontaktinformationen och sidfoten.
+-->
+<body>
+
+
+
+    <!--
+        Här börjar sidhuvudet.
+
+        Jag använder header för att
+        samla hemsidans namn och menyn.
+
+        Klassen site-header används i CSS
+        för att bestämma sidhuvudets utseende.
+
+        Jag använder samma sidhuvud på
+        alla mina sidor för att skapa
+        en sammanhängande design.
+    -->
+    <header class="site-header">
+
+
+        <!--
+            H1 används för hemsidans huvudrubrik.
+
+            Här visar jag namnet SWE Beats.
+
+            Klassen logo gör att jag kan
+            ändra rubrikens utseende i CSS.
+
+            Jag har bland annat valt
+            en större textstorlek och lila färg.
+        -->
+        <h1 class="logo">SWE Beats</h1>
+
+
+
+        <!--
+            Nav används för att skapa
+            navigationsmenyn på hemsidan.
+
+            Klassen main-nav gör att jag
+            kan styla menyn i CSS.
+
+            aria-label="Huvudmeny" beskriver
+            vilken typ av meny det är.
+
+            Det hjälper personer som
+            använder skärmläsare att förstå
+            vad menyn används till.
+        -->
+        <nav class="main-nav" aria-label="Huvudmeny">
+
+
+            <!--
+                Jag använder ul för att
+                samla alla menylänkar i en lista.
+
+                Ul betyder unordered list,
+                alltså en lista utan numrering.
+
+                Varje li är ett eget
+                alternativ i menyn.
+
+                I CSS kan jag ändra hur
+                listan visas, till exempel
+                placera länkarna bredvid varandra.
+            -->
+            <ul>
+
+
+                <!--
+                    Här skapar jag en länk
+                    till startsidan.
+
+                    A används för att göra
+                    texten klickbar.
+
+                    href="index.html" anger
+                    vilken HTML-fil som ska öppnas.
+                -->
+                <li><a href="index.html">Hem</a></li>
+
+
+                <!--
+                    Här länkar jag till stader.html.
+
+                    På den sidan kan besökaren
+                    hitta artister och evenemang
+                    i olika svenska städer.
+                -->
+                <li><a href="stader.html">Stad</a></li>
+
+
+                <!--
+                    Här skapar jag en länk
+                    till om-oss.html.
+
+                    Där berättar jag mer om
+                    SWE Beats och hemsidans idé.
+                -->
+                <li><a href="om-oss.html">Om oss</a></li>
+
+
+                <!--
+                    Den här länken leder till
+                    sidan som besökaren redan
+                    befinner sig på.
+
+                    aria-current="page" visar
+                    att Kontakt är den aktiva sidan.
+
+                    Det hjälper bland annat
+                    skärmläsare att tala om
+                    vilken sida som är öppen.
+
+                    Attributet kan även användas
+                    i CSS för att markera
+                    den aktiva menylänken.
+                -->
+                <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!--
+        Main innehåller sidans viktigaste innehåll.
+
+        På den här sidan handlar innehållet
+        om hur besökaren kan kontakta SWE Beats.
+
+        Jag använder main för att skilja
+        huvudinnehållet från sidhuvudet
+        och sidfoten.
+
+        Det gör HTML-strukturen tydligare.
+    -->
+    <main>
+
+
+
+        <!--
+            FÖRSTA SEKTIONEN - KONTAKTINFORMATION
+
+            Här berättar jag hur besökaren
+            kan komma i kontakt med SWE Beats.
+
+            Jag använder section för att
+            dela upp innehållet i olika delar.
+
+            Klassen section används i CSS
+            för att bestämma bland annat
+            mellanrum och placering.
+
+            id="kontakt" ger sektionen
+            ett unikt namn.
+
+            Det gör att jag kan länka
+            direkt till kontaktsektionen
+            från en annan del av hemsidan.
+        -->
+        <section class="section" id="kontakt">
+
+
+            <!--
+                Här använder jag h2 som
+                rubrik för sektionen.
+
+                H2 är en underrubrik
+                till sidans huvudrubrik.
+
+                Jag använder olika rubriknivåer
+                för att skapa en tydlig
+                struktur på hemsidan.
+            -->
+            <h2>Kontakta SWE Beats</h2>
+
+
+
+            <!--
+                Här använder jag p för
+                att skriva ett textstycke.
+
+                P betyder paragraph och
+                används för vanlig brödtext.
+
+                I det första stycket berättar
+                jag varför besökaren kan
+                vilja kontakta SWE Beats.
+
+                Det kan till exempel handla
+                om frågor, evenemangstips
+                eller samarbeten.
+            -->
+            <p>
+                Har du frågor om SWE Beats,
+                vill tipsa om ett kommande evenemang
+                eller är intresserad av ett samarbete?
+            </p>
+
+
+
+            <!--
+                Här har jag lagt in en kort
+                uppmaning till besökaren.
+
+                Texten förklarar att man
+                kan kontakta SWE Beats
+                genom mejladressen längre ner.
+
+                Jag använder ett nytt p-element
+                för att dela upp texten
+                och göra den lättare att läsa.
+            -->
+            <p>
+                Vi vill gärna höra från dig!
+                Kontakta oss via mejladressen nedan.
+            </p>
+
+
+
+            <!--
+                Här använder jag en div
+                för att samla kontaktkortet.
+
+                Div är en behållare som
+                används för att gruppera innehåll.
+
+                Klassen event-container används
+                i CSS för att bestämma hur
+                korten ska placeras på sidan.
+
+                Jag använder samma klass
+                på mina andra sidor för
+                att behålla en enhetlig layout.
+            -->
+            <div class="event-container">
+
+
+
+                <!--
+                    Här använder jag article
+                    för att skapa ett eget
+                    kort med kontaktinformation.
+
+                    Article passar för innehåll
+                    som fungerar som en egen del.
+
+                    Klassen event-card används
+                    för att styla kortet i CSS.
+
+                    I CSS har jag bland annat
+                    bestämt bakgrundsfärg,
+                    mellanrum och rundade hörn.
+
+                    Jag återanvänder samma
+                    kortdesign som på artistsidorna
+                    för att hela hemsidan
+                    ska kännas sammanhängande.
+                -->
+                <article class="event-card">
+
+
+
+                    <!--
+                        Här använder jag h3
+                        som rubrik inne i kortet.
+
+                        H3 är en underrubrik
+                        till sektionens h2-rubrik.
+
+                        Rubriken visar att
+                        kortet innehåller
+                        kontakt via e-post.
+                    -->
+                    <h3>E-post</h3>
+
+
+
+                    <!--
+                        Här skriver jag vilken typ
+                        av ärenden mejladressen
+                        är tänkt att användas till.
+
+                        Jag använder p eftersom
+                        det är vanlig informationstext.
+                    -->
+                    <p>
+                        För frågor, evenemangstips
+                        och samarbeten:
+                    </p>
+
+
+
+                    <!--
+                        Här har jag lagt in
+                        en klickbar mejladress.
+
+                        A används för att
+                        skapa en länk i HTML.
+
+                        Jag använder mailto:
+                        istället för en vanlig
+                        webbadress i href.
+
+                        Det betyder att webbläsaren
+                        försöker öppna besökarens
+                        förvalda e-postprogram
+                        när länken klickas.
+
+                        Mejladressen fylls då
+                        i som mottagare.
+
+                        Jag har valt detta för
+                        att göra det enklare
+                        för besökaren att kontakta
+                        SWE Beats utan att själv
+                        behöva skriva in adressen.
+
+                        Länken ligger i en p-tagg
+                        så att den visas som
+                        ett eget textstycke.
+                    -->
+                    <p>
+                        <a href="mailto:kontakt@swebeats.se">
+                            kontakt@swebeats.se
+                        </a>
+                    </p>
+
+
+                </article>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!--
+            ANDRA SEKTIONEN - TILLBAKALÄNK
+
+            Här har jag lagt in en länk
+            som tar besökaren tillbaka
+            till startsidan.
+
+            Jag använder en egen section
+            för att skilja länken från
+            kontaktinformationen.
+
+            Det gör det enklare att
+            skapa mellanrum med CSS.
+        -->
+        <section class="section">
+
+
+            <!--
+                Här använder jag a för
+                att skapa en klickbar länk.
+
+                href="index.html" betyder
+                att startsidan öppnas
+                när besökaren klickar.
+
+                Jag har lagt till den här
+                länken för att göra det
+                enklare att navigera tillbaka
+                utan att behöva använda
+                menyn högst upp på sidan.
+            -->
+            <a href="index.html">
+                Tillbaka till startsidan
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!--
+        Här börjar sidfoten.
+
+        Footer används för innehåll
+        som ligger längst ner på sidan.
+
+        Klassen site-footer används
+        i CSS för att bestämma
+        hur sidfoten ska se ut.
+
+        Jag använder samma sidfot
+        på alla mina HTML-sidor
+        för att behålla samma design.
+    -->
+    <footer class="site-footer">
+
+
+        <!--
+            Här visar jag hemsidans namn
+            tillsammans med årtalet.
+
+            &copy; används för att visa
+            copyright-symbolen.
+
+            Jag använder en p-tagg
+            eftersom det är vanlig text.
+
+            Texten ligger längst ner
+            på sidan som en del av sidfoten.
+        -->
+        <p>
+            &copy; 2026 SWE Beats.
+            Alla rättigheter förbehållna.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

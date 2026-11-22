@@ -1,0 +1,801 @@
+
+<!--
+    DOCTYPE visar att dokumentet använder HTML5.
+
+    Det gör att webbläsaren vet hur den ska
+    tolka HTML-koden och visa sidan korrekt.
+-->
+<!DOCTYPE html>
+
+
+<!--
+    Här börjar hela HTML-dokumentet.
+
+    Jag har angett lang="sv" eftersom
+    hemsidan är skriven på svenska.
+
+    Det hjälper bland annat skärmläsare
+    att läsa upp texten på rätt språk.
+-->
+<html lang="sv">
+
+
+<!--
+    Head innehåller information om sidan
+    som inte visas direkt på själva webbsidan.
+
+    Här finns bland annat sidans titel,
+    teckenkodning och kopplingen till CSS.
+-->
+<head>
+
+
+    <!--
+        Jag använder UTF-8 som teckenkodning.
+
+        Det gör att svenska bokstäver som
+        å, ä och ö visas på rätt sätt.
+
+        Utan rätt teckenkodning kan vissa
+        bokstäver visas som konstiga tecken.
+    -->
+    <meta charset="UTF-8">
+
+
+    <!--
+        Den här delen gör att sidan kan
+        anpassas efter olika skärmstorlekar.
+
+        width=device-width betyder att
+        sidans bredd följer enhetens skärm.
+
+        initial-scale=1.0 gör att sidan
+        visas i normal storlek från början.
+
+        Jag har med detta för att hemsidan
+        även ska fungera på mobil och surfplatta.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--
+        Här har jag skrivit en kort beskrivning
+        av vad den här sidan handlar om.
+
+        Beskrivningen kan användas av sökmotorer
+        när sidan visas i sökresultat.
+
+        Den syns inte som vanlig text
+        på själva webbsidan.
+    -->
+    <meta name="description" content="Elektroniska musikevenemang i Stockholm och Göteborg hos SWE Beats.">
+
+
+    <!--
+        Title bestämmer vad som visas
+        i fliken högst upp i webbläsaren.
+
+        Jag har valt Stad | SWE Beats
+        för att det ska vara tydligt
+        vilken sida besökaren är inne på.
+    -->
+    <title>Stad | SWE Beats</title>
+
+
+    <!--
+        Här kopplar jag HTML-filen
+        till min CSS-fil style.css.
+
+        HTML används för att bygga upp
+        innehållet och strukturen.
+
+        CSS används för att bestämma
+        hur sidan ska se ut.
+
+        Jag använder samma CSS-fil
+        på flera sidor för att behålla
+        samma färger, typsnitt och design.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<!--
+    Body innehåller allt som besökaren
+    kan se och använda på webbsidan.
+
+    Här finns bland annat menyn,
+    artistkorten, bilderna och sidfoten.
+-->
+<body>
+
+
+
+    <!--
+        Här börjar sidhuvudet.
+
+        Jag använder header för att samla
+        hemsidans namn och navigationsmenyn.
+
+        Klassen site-header används i CSS
+        för att bestämma hur sidhuvudet
+        ska se ut.
+
+        Samma sidhuvud används på mina
+        olika HTML-sidor för att skapa
+        en enhetlig design.
+    -->
+    <header class="site-header">
+
+
+        <!--
+            H1 är sidans huvudrubrik.
+
+            Här använder jag den för SWE Beats,
+            som är namnet på min hemsida.
+
+            Klassen logo gör att jag kan
+            ändra textens utseende i CSS.
+
+            Jag har bland annat valt
+            större text och lila färg.
+        -->
+        <h1 class="logo">SWE Beats</h1>
+
+
+
+        <!--
+            Nav används för att skapa
+            navigationsmenyn på hemsidan.
+
+            Klassen main-nav gör att jag kan
+            styla menyn genom CSS.
+
+            aria-label="Huvudmeny" beskriver
+            vad det är för typ av meny.
+
+            Det hjälper bland annat personer
+            som använder skärmläsare.
+        -->
+        <nav class="main-nav" aria-label="Huvudmeny">
+
+
+            <!--
+                Jag använder ul för att
+                samla länkarna i en lista.
+
+                Ul betyder unordered list,
+                alltså en lista utan numrering.
+
+                Varje li är ett eget
+                alternativ i menyn.
+
+                Med hjälp av CSS kan jag
+                placera länkarna bredvid varandra.
+            -->
+            <ul>
+
+
+                <!--
+                    Den här länken leder
+                    till startsidan index.html.
+
+                    A-taggen gör texten klickbar
+                    och href anger vilken sida
+                    som ska öppnas.
+                -->
+                <li><a href="index.html">Hem</a></li>
+
+
+                <!--
+                    Den här länken leder
+                    till stader.html.
+
+                    aria-current="page" visar
+                    att besökaren redan är
+                    inne på just den här sidan.
+
+                    Det hjälper bland annat
+                    skärmläsare att förstå
+                    vilken sida som är aktiv.
+                -->
+                <li><a href="stader.html" aria-current="page">Stad</a></li>
+
+
+                <!--
+                    Den här länken leder
+                    till sidan om-oss.html.
+
+                    Där berättar jag mer om
+                    SWE Beats och hemsidans idé.
+                -->
+                <li><a href="om-oss.html">Om oss</a></li>
+
+
+                <!--
+                    Den sista länken leder
+                    till kontakt.html.
+
+                    Där kan besökaren hitta
+                    kontaktinformation.
+                -->
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!--
+        Main innehåller det viktigaste
+        innehållet på den här sidan.
+
+        Jag har delat upp innehållet
+        i tre olika sektioner.
+
+        Den första visar artister i Stockholm,
+        den andra visar artister i Göteborg
+        och den tredje har en tillbakalänk.
+
+        Det gör sidan mer organiserad
+        och enklare att navigera på.
+    -->
+    <main>
+
+
+
+        <!--
+            FÖRSTA SEKTIONEN - STOCKHOLM
+
+            Här har jag samlat artister
+            som är kopplade till Stockholm.
+
+            Jag använder section för att
+            dela upp sidan i olika delar.
+
+            Klassen section används i CSS
+            för att bestämma mellanrum
+            och placering på sidan.
+
+            Jag använder samma klass
+            på flera sektioner för att
+            behålla en enhetlig design.
+        -->
+        <section class="section">
+
+
+
+            <!--
+                H2 används för rubriker
+                till de olika sektionerna.
+
+                Jag använder h2 eftersom
+                SWE Beats redan är sidans
+                huvudrubrik med h1.
+
+                Här visar rubriken vilken
+                stad sektionen handlar om.
+            -->
+            <h2>Event i Stockholm</h2>
+
+
+
+            <!--
+                Här har jag lagt in en kort
+                instruktion till besökaren.
+
+                P används för vanlig text.
+
+                Texten förklarar att man
+                kan klicka på artistkorten
+                för att läsa mer om artisterna.
+            -->
+            <p>
+                Klicka på en artist för att läsa mer.
+            </p>
+
+
+
+            <!--
+                Här använder jag en div för
+                att samla artistkorten.
+
+                Div är en behållare som gör
+                att jag kan gruppera flera
+                HTML-element tillsammans.
+
+                Klassen event-container används
+                i CSS för att styra hur korten
+                placeras på sidan.
+
+                Jag använder samma klass
+                på startsidan för att få
+                samma typ av kortlayout.
+
+                På större skärmar kan korten
+                placeras bredvid varandra.
+            -->
+            <div class="event-container">
+
+
+
+                <!--
+                    FÖRSTA ARTISTKORTET - ALESSO
+
+                    Här har jag skapat ett kort
+                    som visar en bild på Alesso
+                    tillsammans med hans namn.
+
+                    Kortet fungerar som en länk
+                    till artistens egen sida.
+                -->
+
+
+                <!--
+                    Article används för innehåll
+                    som fungerar som en egen del.
+
+                    Här representerar article
+                    ett artistkort för Alesso.
+
+                    Klassen event-card kopplar
+                    kortet till min CSS-fil.
+
+                    I CSS har jag bland annat
+                    bestämt bakgrundsfärg,
+                    rundade hörn och mellanrum.
+
+                    Jag använder samma klass
+                    på flera artistkort så
+                    att de får samma design.
+                -->
+                <article class="event-card">
+
+
+
+                    <!--
+                        Här använder jag en a-tagg
+                        för att skapa en klickbar länk.
+
+                        href="alesso.html" betyder
+                        att besökaren kommer till
+                        Alessos egen sida.
+
+                        Eftersom både bilden och
+                        namnet ligger inuti länken
+                        kan man klicka på båda.
+                    -->
+                    <a href="alesso.html">
+
+
+
+                        <!--
+                            Här använder jag img
+                            för att visa bilden.
+
+                            src="ALESSO.JPG" anger
+                            vilken bildfil som ska visas.
+
+                            Bilden ligger i min
+                            projektmapp tillsammans
+                            med HTML-filerna.
+
+                            Alt beskriver bilden
+                            för tillgänglighet.
+
+                            width="350" anger
+                            bildens bredd i pixlar.
+
+                            Bildens övriga utseende
+                            kan styras med CSS.
+                        -->
+                        <img
+                            src="ALESSO.JPG"
+                            alt="Alesso"
+                            width="350"
+                        >
+
+
+
+                        <!--
+                            H3 används som rubrik
+                            inne i artistkortet.
+
+                            Den ligger på en lägre
+                            rubriknivå än sektionens
+                            h2-rubrik.
+
+                            Här visar jag artistens
+                            namn under bilden.
+                        -->
+                        <h3>Alesso</h3>
+
+
+                    </a>
+
+                </article>
+
+
+
+                <!--
+                    ANDRA ARTISTKORTET - OTTO KNOWS
+
+                    Det här kortet är uppbyggt
+                    på samma sätt som Alessos kort.
+
+                    Jag använder samma HTML-struktur
+                    och CSS-klasser för att korten
+                    ska få ett liknande utseende.
+                -->
+
+
+                <!--
+                    Här skapar jag ett eget
+                    artistkort för Otto Knows.
+
+                    Klassen event-card gör
+                    att det får samma design
+                    som Alessos kort.
+                -->
+                <article class="event-card">
+
+
+
+                    <!--
+                        Här länkar jag bilden
+                        och artistens namn till
+                        otto-knows.html.
+
+                        När besökaren klickar
+                        öppnas Otto Knows egen sida.
+                    -->
+                    <a href="otto-knows.html">
+
+
+
+                        <!--
+                            Här visar jag bilden
+                            på Otto Knows.
+
+                            Src anger bildfilen
+                            och alt beskriver bilden.
+
+                            Width anger att bilden
+                            ska vara 350 pixlar bred.
+                        -->
+                        <img
+                            src="OTTO KNOWS.JPG"
+                            alt="Otto Knows"
+                            width="350"
+                        >
+
+
+
+                        <!--
+                            Här använder jag h3
+                            för artistens namn.
+
+                            Jag använder samma
+                            rubriknivå som på
+                            de andra artistkorten.
+                        -->
+                        <h3>Otto Knows</h3>
+
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!--
+            ANDRA SEKTIONEN - GÖTEBORG
+
+            Här har jag samlat artister
+            som är kopplade till Göteborg.
+
+            Jag har valt att använda samma
+            struktur som för Stockholm.
+
+            Det gör att sidan blir enklare
+            att förstå och att båda städerna
+            får samma design.
+
+            Här finns Nicky Romero
+            och Swedish House Mafia.
+        -->
+        <section class="section">
+
+
+
+            <!--
+                Här använder jag h2 som
+                rubrik för Göteborg.
+
+                Det visar tydligt att
+                en ny sektion börjar.
+            -->
+            <h2>Event i Göteborg</h2>
+
+
+
+            <!--
+                Här har jag lagt in samma
+                instruktion som i Stockholm.
+
+                Besökaren får veta att
+                artistkorten går att klicka på.
+            -->
+            <p>
+                Klicka på en artist för att läsa mer.
+            </p>
+
+
+
+            <!--
+                Här använder jag samma
+                event-container som tidigare.
+
+                Det gör att korten kan
+                placeras på samma sätt
+                som i Stockholm-sektionen.
+            -->
+            <div class="event-container">
+
+
+
+                <!--
+                    FÖRSTA ARTISTKORTET - NICKY ROMERO
+
+                    Här visar jag ett kort
+                    med Nicky Romeros bild
+                    och namn.
+
+                    Besökaren kan klicka
+                    för att läsa mer om honom.
+                -->
+
+
+                <!--
+                    Article skapar själva
+                    artistkortet.
+
+                    Klassen event-card gör
+                    att kortet får samma
+                    design som de andra.
+                -->
+                <article class="event-card">
+
+
+
+                    <!--
+                        Här skapar jag en länk
+                        till nicky-romero.html.
+
+                        På den sidan har jag
+                        lagt in information
+                        om artisten och hans
+                        spelning i Göteborg.
+
+                        Där finns även min
+                        musikfunktion med JavaScript.
+                    -->
+                    <a href="nicky-romero.html">
+
+
+
+                        <!--
+                            Här visar jag bilden
+                            på Nicky Romero.
+
+                            src anger vilken
+                            bildfil som ska användas.
+
+                            Alt beskriver bilden
+                            och width anger bredden.
+
+                            Jag använder samma
+                            bildstorlek som på
+                            de andra korten.
+                        -->
+                        <img
+                            src="NICKY ROMERO.JPG"
+                            alt="Nicky Romero"
+                            width="350"
+                        >
+
+
+
+                        <!--
+                            Här visar jag artistens
+                            namn under bilden.
+
+                            H3 används för att
+                            behålla samma struktur
+                            som på de andra korten.
+                        -->
+                        <h3>Nicky Romero</h3>
+
+
+                    </a>
+
+                </article>
+
+
+
+                <!--
+                    ANDRA ARTISTKORTET -
+                    SWEDISH HOUSE MAFIA
+
+                    Det här kortet fungerar
+                    på samma sätt som de andra.
+
+                    Jag använder samma HTML-struktur
+                    och CSS-klasser för att
+                    skapa en enhetlig design.
+                -->
+
+
+                <!--
+                    Här skapar jag kortet
+                    för Swedish House Mafia.
+
+                    Klassen event-card ger
+                    kortet samma utseende
+                    som de andra artistkorten.
+                -->
+                <article class="event-card">
+
+
+
+                    <!--
+                        Här länkar jag kortet
+                        till swedish-house-mafia.html.
+
+                        På den sidan kan besökaren
+                        läsa mer om gruppen,
+                        deras konserter i Göteborg
+                        och upptäcka deras musik.
+                    -->
+                    <a href="swedish-house-mafia.html">
+
+
+
+                        <!--
+                            Här visar jag bilden
+                            på Swedish House Mafia.
+
+                            Src anger bildfilens namn.
+
+                            Alt beskriver bilden
+                            för tillgänglighet.
+
+                            Width gör att bilden
+                            får en bredd på 350 pixlar.
+                        -->
+                        <img
+                            src="Swedish House Mafia.JPG"
+                            alt="Swedish House Mafia"
+                            width="350"
+                        >
+
+
+
+                        <!--
+                            Här visar jag gruppens
+                            namn under bilden.
+
+                            Jag använder h3 för
+                            att behålla samma
+                            rubriknivå som på
+                            de andra artistkorten.
+                        -->
+                        <h3>Swedish House Mafia</h3>
+
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!--
+            TREDJE SEKTIONEN - TILLBAKALÄNK
+
+            Här har jag lagt in en länk
+            som tar besökaren tillbaka
+            till startsidan.
+
+            Jag tycker att det är bra
+            att ha en sådan länk eftersom
+            det gör hemsidan enklare
+            att navigera på.
+        -->
+        <section class="section">
+
+
+
+            <!--
+                Här använder jag a för
+                att skapa en klickbar länk.
+
+                href="index.html" betyder
+                att besökaren kommer tillbaka
+                till startsidan när länken klickas.
+
+                Jag har lagt länken i en p-tagg
+                så att den ligger som ett
+                eget textstycke.
+            -->
+            <p>
+                <a href="index.html">
+                    Tillbaka till startsidan
+                </a>
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!--
+        Här börjar sidfoten.
+
+        Footer används för innehåll
+        som ligger längst ner på sidan.
+
+        Klassen site-footer används
+        för att bestämma sidfotens
+        utseende i CSS.
+
+        Jag använder samma sidfot på
+        flera sidor för att behålla
+        en enhetlig design.
+    -->
+    <footer class="site-footer">
+
+
+
+        <!--
+            Här visar jag hemsidans namn
+            tillsammans med årtalet.
+
+            &copy; används för att visa
+            copyright-symbolen.
+
+            Jag använder en p-tagg
+            eftersom det är vanlig text.
+        -->
+        <p>
+            &copy; 2026 SWE Beats.
+            Alla rättigheter förbehållna.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

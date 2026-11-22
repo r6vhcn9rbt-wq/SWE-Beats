@@ -1,0 +1,747 @@
+
+<!--
+    DOCTYPE visar att dokumentet använder HTML5.
+    Det gör att webbläsaren vet hur den ska läsa
+    och visa koden på rätt sätt.
+-->
+<!DOCTYPE html>
+
+<!--
+    Här börjar hela HTML-dokumentet.
+
+    Jag har angett lang="sv" eftersom hemsidan
+    är på svenska. Det hjälper bland annat
+    skärmläsare att läsa upp texten på rätt språk.
+-->
+<html lang="sv">
+
+
+<!--
+    I head lägger jag information om själva sidan.
+
+    Det är till exempel sidans titel, teckenkodning
+    och kopplingen till CSS-filen.
+
+    Det som ligger här visas vanligtvis inte
+    som innehåll på själva webbsidan.
+-->
+<head>
+
+    <!--
+        UTF-8 är den teckenkodning jag använder.
+
+        Den gör att svenska bokstäver som å, ä och ö
+        visas korrekt. Utan rätt teckenkodning kan
+        vissa bokstäver visas som konstiga tecken.
+    -->
+    <meta charset="UTF-8">
+
+
+    <!--
+        Den här delen gör att sidan anpassas
+        efter storleken på besökarens skärm.
+
+        width=device-width betyder att sidan
+        använder en bredd som passar enheten.
+
+        initial-scale=1.0 betyder att sidan
+        visas i normal storlek från början.
+
+        Jag har med detta för att hemsidan
+        även ska fungera på mobil och surfplatta.
+    -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!--
+        Här har jag skrivit en kort beskrivning
+        av vad den här sidan handlar om.
+
+        Beskrivningen kan användas av sökmotorer
+        när hemsidan visas i ett sökresultat.
+
+        Den syns alltså inte som vanlig text
+        på själva sidan.
+    -->
+    <meta
+        name="description"
+        content="Läs om Swedish House Mafia, deras konserter i Göteborg och upptäck deras musik på YouTube."
+    >
+
+
+    <!--
+        Title bestämmer vad som står i fliken
+        högst upp i webbläsaren.
+
+        Jag har valt att skriva artistens namn
+        tillsammans med SWE Beats så att man
+        enkelt ser vilken sida man är inne på.
+    -->
+    <title>Swedish House Mafia | SWE Beats</title>
+
+
+    <!--
+        Här kopplar jag HTML-filen till style.css.
+
+        HTML används för att bygga upp innehållet,
+        medan CSS används för att bestämma designen.
+
+        I CSS-filen har jag bland annat bestämt
+        bakgrundsfärger, textfärger, storlekar,
+        mellanrum och hur korten ska se ut.
+
+        Genom att använda samma CSS-fil på flera
+        sidor får hela hemsidan en liknande design.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<!--
+    Body innehåller allt som besökaren kan se
+    och använda på själva webbsidan.
+
+    Här ligger bland annat menyn, bilderna,
+    texterna, knappen och sidfoten.
+-->
+<body>
+
+
+    <!--
+        Här börjar sidhuvudet.
+
+        Jag använder header för att samla
+        hemsidans namn och navigationsmenyn.
+
+        Klassen site-header används i CSS
+        för att bestämma hur sidhuvudet ska se ut.
+
+        Jag använder samma sidhuvud på mina
+        olika HTML-sidor för att få en
+        enhetlig design på hela hemsidan.
+    -->
+    <header class="site-header">
+
+
+        <!--
+            H1 är sidans huvudrubrik.
+
+            Här använder jag den för SWE Beats,
+            som är namnet på min hemsida.
+
+            Klassen logo gör att jag kan styla
+            texten separat i CSS, till exempel
+            med större text och lila färg.
+        -->
+        <h1 class="logo">SWE Beats</h1>
+
+
+        <!--
+            Nav används för att skapa en meny
+            som besökaren kan navigera med.
+
+            Klassen main-nav kopplar menyn till
+            de CSS-regler som styr dess utseende.
+
+            aria-label="Huvudmeny" beskriver
+            vad det är för meny. Det kan hjälpa
+            personer som använder skärmläsare.
+        -->
+        <nav class="main-nav" aria-label="Huvudmeny">
+
+
+            <!--
+                Jag använder ul för att samla
+                alla länkar i en lista.
+
+                Varje li är ett eget alternativ
+                i navigationsmenyn.
+
+                I CSS kan jag sedan göra så att
+                länkarna ligger bredvid varandra
+                i stället för under varandra.
+            -->
+            <ul>
+
+
+                <!--
+                    Den här länken leder till index.html,
+                    som är startsidan på min hemsida.
+
+                    A-taggen gör texten klickbar och
+                    href anger vilken fil som ska öppnas.
+                -->
+                <li>
+                    <a href="index.html">Hem</a>
+                </li>
+
+
+                <!--
+                    Den här länken leder till stader.html.
+
+                    På den sidan har jag samlat artister
+                    och musikevenemang i olika städer.
+                -->
+                <li>
+                    <a href="stader.html">Stad</a>
+                </li>
+
+
+                <!--
+                    Den här länken går till om-oss.html.
+
+                    Där kan besökaren läsa mer om
+                    hemsidan och tanken bakom SWE Beats.
+                -->
+                <li>
+                    <a href="om-oss.html">Om oss</a>
+                </li>
+
+
+                <!--
+                    Den sista länken leder till kontakt.html.
+
+                    Där finns kontaktinformation för
+                    den som vill komma i kontakt med oss.
+                -->
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!--
+        Main innehåller det viktigaste innehållet
+        på just den här sidan.
+
+        Jag har delat upp innehållet i olika
+        sektioner för att få en tydligare struktur.
+
+        Det gör också att det blir enklare
+        att ändra designen med hjälp av CSS.
+    -->
+    <main>
+
+
+
+        <!--
+            FÖRSTA SEKTIONEN
+
+            Här presenterar jag Swedish House Mafia.
+
+            Jag har lagt in en rubrik, en bild
+            och flera textstycken som berättar
+            om gruppen och deras musik.
+
+            Klassen section används på flera
+            ställen på hemsidan så att sektionerna
+            får samma mellanrum och utseende.
+        -->
+        <section class="section">
+
+
+            <!--
+                H2 används för rubriker till
+                de olika sektionerna.
+
+                Här visar rubriken vilken artist
+                besökaren läser om.
+            -->
+            <h2>Swedish House Mafia</h2>
+
+
+            <!--
+                Här visar jag en bild på gruppen.
+
+                Src anger namnet på bildfilen som
+                jag har sparat i projektmappen.
+
+                Alt är en textbeskrivning av bilden.
+                Den är bra för tillgängligheten
+                och visas även om bilden inte laddas.
+
+                Width="350" gör att bilden får
+                en bredd på 350 pixlar.
+            -->
+            <img
+                src="Swedish House Mafia2.JPG"
+                alt="Bild på Swedish House Mafia"
+                width="350"
+            >
+
+
+            <!--
+                P används för vanliga textstycken.
+
+                I det första stycket berättar jag
+                vilka medlemmar som ingår i gruppen.
+
+                Jag delar upp informationen i flera
+                stycken för att göra texten lättare
+                att läsa och få en tydligare struktur.
+            -->
+            <p>
+                Swedish House Mafia är en svensk
+                elektronisk musikgrupp som består
+                av Axwell, Sebastian Ingrosso
+                och Steve Angello.
+            </p>
+
+
+            <!--
+                Här berättar jag lite om gruppens
+                bakgrund och när den bildades.
+
+                Informationen ligger i ett eget
+                textstycke för att inte all text
+                ska hamna i ett enda långt stycke.
+            -->
+            <p>
+                Gruppen bildades 2008 och blev
+                internationellt känd genom sin
+                elektroniska dansmusik.
+            </p>
+
+
+            <!--
+                I det här stycket beskriver jag
+                vilken typ av musik och framträdanden
+                Swedish House Mafia är kända för.
+            -->
+            <p>
+                Swedish House Mafia är särskilt
+                kända för sina stora liveshower,
+                energiska framträdanden och
+                melodiska housemusik.
+            </p>
+
+
+            <!--
+                Här nämner jag några av deras
+                mest kända låtar.
+
+                Det ger besökaren en bättre bild
+                av vilken musik gruppen gör.
+            -->
+            <p>
+                Bland deras mest kända låtar finns
+                Don't You Worry Child,
+                Save The World och Greyhound.
+            </p>
+
+        </section>
+
+
+
+        <!--
+            ANDRA SEKTIONEN
+
+            Här har jag samlat information
+            om Swedish House Mafias konserter
+            i Göteborg under 2026.
+
+            Jag använder både vanlig text
+            och ett informationskort.
+
+            Kortet gör att datum och plats
+            blir enklare för besökaren att hitta.
+        -->
+        <section class="section">
+
+
+            <!-- Rubrik för konserterna i Göteborg -->
+            <h2>Swedish House Mafia i Göteborg</h2>
+
+
+            <!--
+                Här berättar jag vilket datum
+                konserterna ägde rum och var
+                de hölls.
+            -->
+            <p>
+                Den 28 och 29 augusti 2026
+                uppträdde Swedish House Mafia
+                på Ullevi i Göteborg.
+            </p>
+
+
+            <!--
+                Det här stycket ger lite extra
+                information om konserterna.
+            -->
+            <p>
+                Konserterna samlade fans av
+                elektronisk dansmusik för
+                två stora musikupplevelser.
+            </p>
+
+
+            <!--
+                Här använder jag en div för att
+                samla informationen i en behållare.
+
+                Klassen event-container används
+                i CSS för att styra placeringen
+                av korten på hemsidan.
+
+                Jag använder samma klass på
+                flera sidor för att designen
+                ska vara konsekvent.
+            -->
+            <div class="event-container">
+
+
+                <!--
+                    Article används för innehåll
+                    som fungerar som en egen del.
+
+                    Här använder jag article
+                    för att skapa ett eventkort.
+
+                    Klassen event-card ger kortet
+                    dess utseende genom CSS,
+                    till exempel bakgrundsfärg,
+                    rundade hörn och mellanrum.
+                -->
+                <article class="event-card">
+
+
+                    <!--
+                        H3 används som rubrik
+                        inne i själva kortet.
+
+                        Det gör att rubriken får
+                        en lägre nivå än H2-rubriken
+                        för hela sektionen.
+                    -->
+                    <h3>
+                        Swedish House Mafia –
+                        Göteborg 2026
+                    </h3>
+
+
+                    <!--
+                        Strong gör ordet Datum
+                        fetmarkerat i webbläsaren.
+
+                        Jag använder det för att
+                        tydligt skilja rubriken
+                        från själva datumet.
+                    -->
+                    <p>
+                        <strong>Datum:</strong>
+                        28–29 augusti 2026
+                    </p>
+
+
+                    <!--
+                        Här visar jag platsen
+                        där konserterna hölls.
+
+                        Jag använder samma upplägg
+                        som för datumet.
+                    -->
+                    <p>
+                        <strong>Plats:</strong>
+                        Ullevi
+                    </p>
+
+
+                    <!--
+                        Här visar jag vilken stad
+                        konserterna ägde rum i.
+                    -->
+                    <p>
+                        <strong>Stad:</strong>
+                        Göteborg
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!--
+            TREDJE SEKTIONEN
+
+            Här har jag lagt till en interaktiv
+            funktion med hjälp av JavaScript.
+
+            Funktionen gör att besökaren kan
+            klicka på en knapp och få en
+            slumpmässig låt av Swedish House Mafia.
+
+            När en låt har valts visas dess namn
+            och en länk till YouTube.
+
+            Jag har gjort samma funktion på
+            de andra artistsidorna också.
+        -->
+        <section class="section">
+
+
+            <!-- Rubrik för musikfunktionen -->
+            <h2>Upptäck Swedish House Mafias musik</h2>
+
+
+            <!--
+                Här förklarar jag för besökaren
+                hur musikfunktionen används.
+            -->
+            <p>
+                Vet du inte vilken låt du ska lyssna på?
+                Klicka på knappen så väljer SWE Beats
+                en låt åt dig!
+            </p>
+
+
+            <!--
+                Jag använder en div för att samla
+                alla delar av musikfunktionen.
+
+                Id="musikspelare" gör att JavaScript
+                kan hitta just den här behållaren.
+
+                Ett id används för att identifiera
+                ett specifikt element på sidan.
+
+                data-artist="shm" är ett eget
+                data-attribut som jag använder
+                för att tala om vilken artist
+                den här sidan handlar om.
+
+                JavaScript läser värdet "shm"
+                och väljer då låtarna från
+                Swedish House Mafias låtlista.
+
+                På de andra artistsidorna
+                används andra värden, till
+                exempel "alesso" och "otto".
+            -->
+            <div id="musikspelare" data-artist="shm">
+
+
+                <!--
+                    Här skapar jag knappen
+                    som besökaren klickar på.
+
+                    Button används för att skapa
+                    en knapp på webbsidan.
+
+                    type="button" visar att knappen
+                    är en vanlig knapp och inte
+                    ska skicka något formulär.
+
+                    Id="slumpa-knapp" gör att
+                    JavaScript kan hitta knappen.
+
+                    I JavaScript har jag använt
+                    addEventListener för att
+                    känna av när någon klickar.
+
+                    När knappen klickas körs
+                    funktionen som slumpar en låt.
+
+                    Knappens färg, storlek och
+                    utseende styrs genom CSS.
+                -->
+                <button
+                    type="button"
+                    id="slumpa-knapp">
+                    Slumpa en låt
+                </button>
+
+
+
+                <!--
+                    Här visas resultatet från
+                    JavaScript-funktionen.
+
+                    Från början står det
+                    "Ingen låt vald ännu."
+
+                    När besökaren klickar på
+                    knappen väljer JavaScript
+                    en slumpmässig låt.
+
+                    Sedan ändras texten här
+                    till namnet på den valda låten.
+
+                    Id="slumpad-lat" gör att
+                    JavaScript hittar rätt textfält.
+
+                    aria-live="polite" gör att
+                    skärmläsare kan meddela när
+                    texten uppdateras utan att
+                    avbryta användaren direkt.
+                -->
+                <p
+                    id="slumpad-lat"
+                    aria-live="polite">
+                    Ingen låt vald ännu.
+                </p>
+
+
+
+                <!--
+                    Här har jag skapat en länk
+                    som leder till YouTube.
+
+                    Från början är href="#"
+                    eftersom ingen låt har valts.
+
+                    När JavaScript slumpar en låt
+                    ändras href till YouTube-länken
+                    som hör till just den låten.
+
+                    target="_blank" gör att
+                    videon öppnas i en ny flik.
+
+                    rel="noopener noreferrer"
+                    används av säkerhetsskäl
+                    när länkar öppnas i nya flikar.
+
+                    Hidden gör att länken inte
+                    visas innan en låt har valts.
+
+                    När JavaScript har valt en låt
+                    tas det dolda läget bort
+                    och länken blir synlig.
+
+                    På det sättet kan besökaren
+                    själv välja att öppna låten
+                    på YouTube.
+                -->
+                <a
+                    id="youtube-lank"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    hidden>
+                    Lyssna på YouTube
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!--
+            FJÄRDE SEKTIONEN
+
+            Här har jag lagt in en länk
+            tillbaka till startsidan.
+
+            Jag tycker det är bra att ha
+            en sådan länk eftersom besökaren
+            enkelt kan gå tillbaka utan att
+            behöva använda webbläsarens
+            tillbaka-knapp.
+        -->
+        <section class="section">
+
+
+            <!--
+                A-taggen skapar en klickbar länk.
+
+                Href="index.html" betyder att
+                besökaren kommer till startsidan
+                när länken klickas.
+            -->
+            <p>
+                <a href="index.html">
+                    Tillbaka till startsidan
+                </a>
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!--
+        Här börjar sidfoten.
+
+        Footer används för innehåll som
+        ska ligga längst ner på sidan.
+
+        Klassen site-footer gör att jag
+        kan styla sidfoten i CSS.
+
+        Jag använder samma sidfot på
+        mina olika HTML-sidor.
+    -->
+    <footer class="site-footer">
+
+
+        <!--
+            Här visar jag hemsidans namn
+            tillsammans med årtalet.
+
+            &copy; används för att visa
+            copyright-symbolen.
+
+            Det här ligger längst ner
+            på sidan som en avslutning.
+        -->
+        <p>
+            &copy; 2026 SWE Beats.
+            Alla rättigheter förbehållna.
+        </p>
+
+    </footer>
+
+
+
+    <!--
+        Här kopplar jag HTML-sidan till
+        min JavaScript-fil script.js.
+
+        JavaScript används för att göra
+        hemsidan mer interaktiv.
+
+        I script.js har jag skapat listor
+        med låtar från olika artister.
+
+        Jag har också gjort en funktion
+        som använder Math.random() för
+        att slumpa fram en låt.
+
+        JavaScript kontrollerar vilken
+        artist som finns på sidan genom
+        data-artist och väljer rätt låtlista.
+
+        När besökaren klickar på knappen
+        uppdateras låtens namn och
+        länken till YouTube.
+
+        Jag använder samma JavaScript-fil
+        för Alesso, Otto Knows,
+        Swedish House Mafia och Nicky Romero.
+
+        Script-taggen ligger längst ner
+        i body så att HTML-elementen hinner
+        läsas in innan JavaScript körs.
+    -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+
+<!--
+    Här anger jag att dokumentet använder HTML5.
+    Det gör att webbläsaren kan tolka koden korrekt.
+-->
+<!DOCTYPE html>
+
+<!--
+    Här börjar HTML-dokumentet.
+    lang="sv" visar att sidan är skriven på svenska.
+-->
+<html lang="sv">
+
+<head>
+
+    <!--
+        UTF-8 gör att svenska bokstäver som
+        å, ä och ö visas på rätt sätt.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        Den här inställningen gör att sidan
+        kan anpassas till mobil och surfplatta.
+
+        width=device-width använder skärmens bredd
+        och initial-scale=1.0 ger normal zoomnivå.
+    -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!--
+        Här skriver jag en kort beskrivning av sidan.
+        Den kan användas av sökmotorer och syns
+        inte som vanlig text på hemsidan.
+    -->
+    <meta
+        name="description"
+        content="Läs om Alesso, hans konsert i Stockholm och upptäck hans musik på YouTube."
+    >
+
+    <!--
+        Den här titeln visas i webbläsarens flik.
+    -->
+    <title>Alesso | SWE Beats</title>
+
+    <!--
+        Här kopplar jag sidan till style.css.
+        Jag använder samma CSS-fil på alla sidor
+        för att få samma färger och design.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!--
+        Här börjar sidhuvudet.
+
+        Jag använder header för att samla
+        hemsidans namn och navigationsmenyn.
+        Klassen site-header styr utseendet i CSS.
+    -->
+    <header class="site-header">
+
+        <!--
+            H1 är sidhuvudets huvudrubrik.
+            Klassen logo används för att ändra
+            textstorlek och färg i CSS.
+        -->
+        <h1 class="logo">SWE Beats</h1>
+
+        <!--
+            Nav används för navigationsmenyn.
+            aria-label hjälper skärmläsare
+            att förstå att detta är huvudmenyn.
+        -->
+        <nav class="main-nav" aria-label="Huvudmeny">
+
+            <!--
+                Ul samlar menylänkarna i en lista.
+                Varje li innehåller en klickbar länk.
+            -->
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="stader.html">Stad</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!--
+        Main innehåller sidans huvudsakliga innehåll.
+        Här har jag samlat information om Alesso,
+        hans konsert och musikfunktionen.
+    -->
+    <main>
+
+
+        <!--
+            SEKTION 1 - OM ALESSO
+
+            Jag använder section för att dela
+            upp sidan i olika delar.
+
+            Klassen section används i CSS för
+            att skapa mellanrum och en tydlig layout.
+        -->
+        <section class="section">
+
+            <!-- Rubriken för artistinformationen. -->
+            <h2>Alesso</h2>
+
+            <!--
+                Här visar jag en bild på Alesso.
+
+                src anger vilken bildfil som används.
+                alt beskriver bilden för exempelvis
+                personer som använder skärmläsare.
+
+                width="350" anger bildens bredd.
+            -->
+            <img
+                src="ALESSO2.JPG"
+                alt="Bild på DJ:n Alesso"
+                width="350"
+            >
+
+            <!--
+                Jag använder p för vanliga textstycken.
+                Här berättar jag vem Alesso är.
+            -->
+            <p>
+                Alesso, egentligen Alessandro Lindblad,
+                är en svensk DJ och musikproducent.
+                Han är internationellt känd inom
+                elektronisk dansmusik.
+            </p>
+
+            <!--
+                Här beskriver jag vilken typ av
+                elektronisk musik Alesso gör.
+            -->
+            <p>
+                Hans musik blandar house och
+                progressiv house med melodiska
+                inslag och stora refränger.
+            </p>
+
+            <!--
+                Här berättar jag lite om hans
+                internationella musikkarriär.
+            -->
+            <p>
+                Alesso har samarbetat med flera
+                internationella artister och
+                uppträtt på stora festivaler
+                runt om i världen.
+            </p>
+
+        </section>
+
+
+        <!--
+            SEKTION 2 - KONSERT I STOCKHOLM
+
+            Här visar jag information om
+            Alessos konsert i Stockholm.
+
+            Jag använder samma kortdesign
+            som på de andra artistsidorna.
+        -->
+        <section class="section">
+
+            <h2>Alesso i Stockholm</h2>
+
+            <p>
+                Den 27 juni 2026 uppträdde Alesso
+                på Skansen Solliden i Stockholm.
+            </p>
+
+            <!--
+                Div används för att samla innehåll.
+
+                Klassen event-container används
+                i CSS för att placera korten.
+            -->
+            <div class="event-container">
+
+                <!--
+                    Article används för att skapa
+                    ett separat informationskort.
+
+                    Klassen event-card styr bland
+                    annat bakgrund, mellanrum
+                    och rundade hörn.
+                -->
+                <article class="event-card">
+
+                    <h3>Alesso – Stockholm 2026</h3>
+
+                    <!--
+                        Strong markerar viktiga ord
+                        och visas normalt i fetstil.
+                    -->
+                    <p>
+                        <strong>Datum:</strong>
+                        27 juni 2026
+                    </p>
+
+                    <p>
+                        <strong>Plats:</strong>
+                        Skansen Solliden
+                    </p>
+
+                    <p>
+                        <strong>Stad:</strong>
+                        Stockholm
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!--
+            SEKTION 3 - JAVASCRIPT OCH YOUTUBE
+
+            Här har jag lagt till en interaktiv
+            funktion där besökaren kan slumpa
+            fram en låt från Alesso.
+
+            Funktionen styrs av JavaScript
+            som ligger i filen script.js.
+        -->
+        <section class="section">
+
+            <h2>Upptäck Alessos musik</h2>
+
+            <p>
+                Vet du inte vilken låt du ska lyssna på?
+                Klicka på knappen så väljer SWE Beats
+                en låt åt dig!
+            </p>
+
+
+            <!--
+                Här har jag lagt till en div
+                som samlar hela musikfunktionen.
+
+                id="musikspelare" gör att JavaScript
+                kan hitta den här behållaren.
+
+                data-artist="alesso" berättar för
+                JavaScript vilken artist sidan gäller.
+
+                I script.js använder jag dataset.artist
+                för att läsa värdet "alesso".
+
+                Då vet JavaScript att det ska välja
+                låtar från arrayen alessoLatar.
+
+                Jag använder samma lösning på
+                mina andra artistsidor, men ändrar
+                värdet i data-artist för varje artist.
+            -->
+            <div id="musikspelare" data-artist="alesso">
+
+
+                <!--
+                    Här har jag skapat knappen
+                    som besökaren klickar på.
+
+                    type="button" visar att det
+                    är en vanlig knapp.
+
+                    id="slumpa-knapp" används
+                    av både CSS och JavaScript.
+
+                    I JavaScript använder jag
+                    addEventListener för att känna
+                    av när besökaren klickar.
+
+                    När knappen klickas körs
+                    funktionen slumpaLat().
+                -->
+                <button
+                    type="button"
+                    id="slumpa-knapp">
+                    Slumpa en låt
+                </button>
+
+
+                <!--
+                    Här visas namnet på låten
+                    som JavaScript har valt.
+
+                    Från början står det
+                    "Ingen låt vald ännu."
+
+                    När besökaren klickar
+                    på knappen ändrar JavaScript
+                    texten med hjälp av textContent.
+
+                    aria-live="polite" gör att
+                    skärmläsare kan meddela när
+                    texten ändras utan att avbryta
+                    användaren direkt.
+                -->
+                <p
+                    id="slumpad-lat"
+                    aria-live="polite">
+                    Ingen låt vald ännu.
+                </p>
+
+
+                <!--
+                    Här har jag lagt in en länk
+                    som ska öppna den valda låten
+                    på YouTube.
+
+                    href="#" är en tillfällig adress.
+                    JavaScript byter ut den mot
+                    rätt YouTube-länk när en låt väljs.
+
+                    target="_blank" öppnar länken
+                    i en ny flik.
+
+                    rel="noopener noreferrer" används
+                    av säkerhets- och integritetsskäl
+                    när en länk öppnas i en ny flik.
+
+                    hidden gör att länken är dold
+                    innan besökaren har valt en låt.
+
+                    När en låt har slumpats ändrar
+                    JavaScript hidden till false,
+                    vilket gör länken synlig.
+                -->
+                <a
+                    id="youtube-lank"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    hidden>
+                    Lyssna på YouTube
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!--
+            SEKTION 4 - TILLBAKA TILL STARTSIDAN
+
+            Här har jag lagt in en extra länk
+            till startsidan för att göra det
+            enklare att navigera på hemsidan.
+        -->
+        <section class="section">
+
+            <p>
+                <a href="index.html">
+                    Tillbaka till startsidan
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!--
+        Footer används för sidfoten.
+
+        Jag använder samma sidfot på alla
+        sidor för att få en enhetlig design.
+
+        &copy; visar copyright-symbolen.
+    -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 SWE Beats.
+            Alla rättigheter förbehållna.
+        </p>
+
+    </footer>
+
+
+    <!--
+        Här kopplar jag HTML-sidan till script.js.
+
+        JavaScript-filen innehåller låtlistorna
+        och funktionen som slumpar fram en låt.
+
+        Jag placerar script-taggen längst ner
+        i body så att HTML-elementen hinner
+        laddas innan JavaScript försöker hitta dem.
+    -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
